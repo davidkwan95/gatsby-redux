@@ -1,44 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import Paper from 'material-ui/Paper';
-
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+
+import Header from './Header';
 import './index.css';
+import rootReducer from '../rootReducer';
+
+const store = createStore(rootReducer);
 
 injectTapEventPlugin();
-
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby Redux
-        </Link>
-      </h1>
-    </div>
-  </div>
-);
 
 const paperStyle = {
   minHeight: '100vh',
@@ -56,7 +35,9 @@ const TemplateWrapper = ({ children }) => (
     <Header />
     <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
       <Paper style={paperStyle}>
-        {children()}
+        <Provider store={store}>
+          {children()}
+        </Provider>
       </Paper>
     </MuiThemeProvider>
   </div>
