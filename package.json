@@ -13,6 +13,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "lint": "eslint src",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
