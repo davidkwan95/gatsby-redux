@@ -41,7 +41,7 @@ const Header = () => (
 );
 
 const paperStyle = {
-  height: '100vh',
+  minHeight: '100vh',
   padding: '30px 60px',
 };
 const TemplateWrapper = ({ children }) => (
