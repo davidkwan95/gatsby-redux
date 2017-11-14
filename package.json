@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-redux",
+  "description": "Gatsby with redux",
+  "version": "1.0.0",
+  "author": "David Kwan <davidkwan95@gmail.com>",
+  "keywords": [
+    "gatsby",
+    "redux"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.110",
+    "gatsby-link": "^1.6.27",
+    "gatsby-plugin-react-helmet": "^1.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  }
+}
