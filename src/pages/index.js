@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import CounterContainer from '../containers/CounterContainer';
+import CounterContainer from '../modules/Counter/containers/CounterContainer';
 
 const linkStyle = {
   color: 'hotpink',

@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const Counter = props => (
-  <div style={{textAlign: 'center'}}>
+  <div style={{ textAlign: 'center' }}>
     <div>
       <RaisedButton
         label="+"
@@ -11,7 +11,7 @@ const Counter = props => (
         onClick={props.onClickIncrement}
       />
     </div>
-    <div>{ props.counter }</div>
+    <div>{ props.count }</div>
     <div>
       <RaisedButton
         label="-"
@@ -23,7 +23,7 @@ const Counter = props => (
 );
 
 Counter.propTypes = {
-  counter: PropTypes.number.isRequired,
+  count: PropTypes.number.isRequired,
   onClickIncrement: PropTypes.func.isRequired,
   onClickDecrement: PropTypes.func.isRequired,
 };
