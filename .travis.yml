@@ -4,7 +4,7 @@ node_js:
 script:
   - yarn lint
   - yarn test
-  - yarn build
+  - yarn gh-build
 deploy:
   provider: pages
   skip_cleanup: true

@@ -18,6 +18,7 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
+    "gh-build": "gatsby build --prefix-paths",
     "lint": "eslint src",
     "test": "jest"
   },
