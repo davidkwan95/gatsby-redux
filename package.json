@@ -19,7 +19,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "lint": "eslint src",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && node scripts/deploy",
     "test": "jest"
   },
   "dependencies": {
